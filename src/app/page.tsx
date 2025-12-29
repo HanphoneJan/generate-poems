@@ -216,30 +216,6 @@ export default function Home() {
         </div>
       )}
 
-      {/* 移动端头部 */}
-      <header className="sticky top-0 z-40 backdrop-blur-lg bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-orange-600 dark:text-orange-400" />
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
-                诗歌生成器
-              </h1>
-            </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                const historySection = document.getElementById('history-section');
-                historySection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="md:hidden"
-            >
-              <History className="w-5 h-5" />
-            </Button>
-          </div>
-        </div>
-      </header>
 
       {/* 主内容区 - 类似聊天界面 */}
       <div className="flex flex-col h-[calc(100vh-64px)] sm:h-[calc(100vh-80px)]">
