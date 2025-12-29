@@ -62,7 +62,9 @@ npm install
 创建 `.env` 文件，添加以下内容：
 
 ```bash
-DATABASE_URL="file:./prisma/db/custom.db"
+DATABASE_URL="file:E:/develop_project/hanphone-play/generate-poems/prisma/db/custom.db"
+API_BASE_URL="https://api.deepseek.com" #我使用了 DeepSeek 的 API 地址，可替换为其他 API 地址
+API_KEY="xxxxx" # 替换为实际的 API 密钥
 ```
 
 4. **初始化数据库**
@@ -97,6 +99,7 @@ npm run dev
 │   │   └── ui/          # Shadcn UI 组件
 │   ├── hooks/           # 自定义钩子
 │   └── lib/             # 工具函数
+├── .env                 # 环境变量
 ├── .dockerignore        # Docker 忽略文件
 ├── .gitignore           # Git 忽略文件
 ├── LICENSE              # 许可证

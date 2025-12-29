@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import ZAI from 'z-ai-web-dev-sdk';
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  baseURL: process.env.API_BASE_URL,
+  apiKey: process.env.API_KEY,
+});
 
 const POEM_PROMPTS = {
   tang: (theme: string) => `请创作一首关于"${theme}"的唐诗。
@@ -165,10 +170,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const zai = await ZAI.create();
-    
-    const completion = await zai.chat.completions.create({
-      model: 'glm-4.5-flash',
+    const completion = await openai.chat.completions.create({
+      model: 'deepseek-chat',
       messages: [
         {
           role: 'system',
@@ -179,13 +182,12 @@ export async function POST(request: NextRequest) {
           content: promptGenerator(theme)
         }
       ],
-      temperature: 0.8,
+      temperature: 1.5,
       max_tokens: 1000,
     });
     
-    // 修改：优先使用content，如果为空则使用reasoning_content
     const message = completion.choices[0]?.message;
-    let response = message?.content || message?.reasoning_content || '';
+    let response = message?.content || '';
     
     if (!response) {
       throw new Error('AI生成失败');
