@@ -82,7 +82,7 @@ export default function Home() {
       // 保存到数据库
       try {
         await savePoemToDatabase(selectedType, theme.trim(), data.poem);
-        // 刷新历史记录
+        // 刷新历史记录（从数据库重新加载，保证数据唯一）
         await loadPoemHistory();
         // 显示成功提示
         setShowSuccess(true);
@@ -91,15 +91,7 @@ export default function Home() {
         console.error('保存诗歌失败:', saveError);
       }
       
-      // 添加到本地历史记录
-      const newPoem: Poem = {
-        id: Date.now().toString(),
-        type: POEM_TYPES.find(t => t.value === selectedType)?.label || selectedType,
-        theme: theme.trim(),
-        content: data.poem,
-        createdAt: new Date()
-      };
-      setPoemHistory(prev => [newPoem, ...prev.slice(0, 9)]); // 保留最近10首
+      // 移除了手动添加本地记录的逻辑，避免重复
     } catch (error) {
       console.error('Error generating poem:', error);
       setGeneratedPoem('生成失败，请重试');
@@ -323,7 +315,8 @@ export default function Home() {
                         className="p-2 rounded-lg bg-gray-50 dark:bg-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
                         onClick={() => {
                           setGeneratedPoem(poem.content);
-                          setSelectedType(poem.type);
+                          // 修复：这里需要匹配value而非label
+                          setSelectedType(POEM_TYPES.find(t => t.label === poem.type)?.value || poem.type);
                           setTheme(poem.theme);
                         }}
                       >

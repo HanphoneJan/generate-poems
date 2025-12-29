@@ -14,25 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "AI诗歌生成器",
+  description: "Generate poems with AI.Built with TypeScript, Tailwind CSS, and shadcn/ui.",
+  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
+  authors: [{ name: "Hanphone" }],
   icons: {
     icon: "https://www.hanphone.top/favicon.ico",
   },
   openGraph: {
-    title: "Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "诗歌生成器",
+    description: "Generate poems with AI.Built with TypeScript, Tailwind CSS, and shadcn/ui.",
+    url: "https://www.hanphone.top/generate-poems",
+    siteName: "Hanphone's AI Poem Generator",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Code Scaffold",
-    description: "AI-powered development with modern React stack",
-  },
+  }
 };
 
 export default function RootLayout({
