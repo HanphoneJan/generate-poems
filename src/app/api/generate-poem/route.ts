@@ -175,7 +175,7 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: 'system',
-          content: '你是一位精通古今中外各种诗歌体裁的诗人，能够创作出高质量的诗歌作品,每次你返回的诗歌都必须为原创。请严格按照要求的JSON格式返回结果，不要添加任何解释或额外内容。'
+          content: '你是一位精通古今中外各种诗歌体裁的诗人，能够创作出高质量的诗歌作品,每次你返回的诗歌都必须为原创，不得抄袭。请严格按照要求的JSON格式返回结果，不要添加任何解释或额外内容。'
         },
         {
           role: 'user',
