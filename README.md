@@ -4,6 +4,8 @@
 
 诗歌生成器是一个基于 Next.js 15 构建的现代化 Web 应用，支持多种诗歌体裁的智能生成。用户可以选择诗歌类型并输入主题，系统将生成相应风格的诗歌作品。
 
+在线预览地址：[https://www.hanphone.top/generate-poems](https://www.hanphone.top/generate-poems/)
+
 ## ✨ 项目特性
 
 - 🎨 **多种诗歌体裁**：支持唐诗、宋词、楚辞、汉赋、现代诗、十四行诗、俳句等
