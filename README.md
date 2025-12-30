@@ -1,14 +1,5 @@
 # 诗歌生成器
 
-<div align="center">
-
-[![GitHub Stars](https://img.shields.io/github/stars/HanphoneJan/generate-poems?style=for-the-badge&color=orange)](https://github.com/HanphoneJan/generate-poems/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/HanphoneJan/generate-poems?style=for-the-badge&color=blue)](https://github.com/HanphoneJan/generate-poems/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/HanphoneJan/generate-poems?style=for-the-badge&color=red)](https://github.com/HanphoneJan/generate-poems/issues)
-[![GitHub License](https://img.shields.io/github/license/HanphoneJan/generate-poems?style=for-the-badge&color=green)](https://github.com/HanphoneJan/generate-poems/blob/main/LICENSE)
-
-</div>
-
 ## 📝 项目简介
 
 诗歌生成器是一个基于 Next.js 15 构建的现代化 Web 应用，支持多种诗歌体裁的智能生成。用户可以选择诗歌类型并输入主题，系统将生成相应风格的诗歌作品。
@@ -62,9 +53,10 @@ npm install
 创建 `.env` 文件，添加以下内容：
 
 ```bash
-DATABASE_URL="file:E:/develop_project/hanphone-play/generate-poems/prisma/db/custom.db"
+DATABASE_URL="file:./db/custom.db"  # ./ 代表 prisma 文件夹的根目录
 API_BASE_URL="https://api.deepseek.com" #我使用了 DeepSeek 的 API 地址，可替换为其他 API 地址
 API_KEY="xxxxx" # 替换为实际的 API 密钥
+PORT=4666 # 项目运行端口
 ```
 
 4. **初始化数据库**
@@ -205,6 +197,16 @@ npm run dev
 感谢所有为本项目做出贡献的开发者和支持者！
 
 ---
+
+
+<div align="center">
+
+[![GitHub Stars](https://img.shields.io/github/stars/HanphoneJan/generate-poems?style=for-the-badge&color=orange)](https://github.com/HanphoneJan/generate-poems/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/HanphoneJan/generate-poems?style=for-the-badge&color=blue)](https://github.com/HanphoneJan/generate-poems/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/HanphoneJan/generate-poems?style=for-the-badge&color=red)](https://github.com/HanphoneJan/generate-poems/issues)
+[![GitHub License](https://img.shields.io/github/license/HanphoneJan/generate-poems?style=for-the-badge&color=green)](https://github.com/HanphoneJan/generate-poems/blob/main/LICENSE)
+
+</div>
 
 <div align="center">
 
