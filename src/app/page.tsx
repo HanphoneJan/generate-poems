@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Loader2, BookOpen, History, Download, RefreshCw, Sparkles, ChevronDown, PenTool, Send } from 'lucide-react';
+import { Loader2,  History, Download, RefreshCw, Sparkles, ChevronDown, PenTool, Send } from 'lucide-react';
+
+const basePath =  '/generate-poems';
 
 interface Poem {
   id: string;
@@ -40,7 +42,7 @@ export default function Home() {
 
   const loadPoemHistory = async () => {
     try {
-      const response = await fetch('/api/poems');
+      const response = await fetch(`${basePath}/api/poems`);
       if (response.ok) {
         const data = await response.json();
         const poems = data.poems.slice(0, 10).map((poem: any) => ({
@@ -64,7 +66,7 @@ export default function Home() {
     setAnimationKey(prev => prev + 1); // 重置动画
 
     try {
-      const response = await fetch('/api/generate-poem', {
+      const response = await fetch(`${basePath}/api/generate-poem`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +105,7 @@ export default function Home() {
   };
 
   const savePoemToDatabase = async (type: string, theme: string, content: string) => {
-    const response = await fetch('/api/poems', {
+    const response = await fetch(`${basePath}/api/poems`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
