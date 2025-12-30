@@ -58,6 +58,7 @@ DATABASE_URL="file:./db/custom.db"  # ./ 代表 prisma 文件夹的根目录
 API_BASE_URL="https://api.deepseek.com" #我使用了 DeepSeek 的 API 地址，可替换为其他 API 地址
 API_KEY="xxxxx" # 替换为实际的 API 密钥
 PORT=4666 # 项目运行端口
+NODE_ENV=development # 可选，设置为 development 或 production
 ```
 
 4. **初始化数据库**
@@ -75,7 +76,15 @@ npm run dev
 
 6. **访问应用**
 
-打开浏览器访问 `http://localhost:3000`
+打开浏览器访问 `http://localhost:4666`
+
+7. **部署**
+
+```bash
+npm run build
+npm run start
+```
+
 
 ## 📁 项目结构
 
