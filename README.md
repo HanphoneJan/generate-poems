@@ -4,7 +4,7 @@
 
 诗歌生成器是一个基于 Next.js 15 构建的现代化 Web 应用，支持多种诗歌体裁的智能生成。用户可以选择诗歌类型并输入主题，系统将生成相应风格的诗歌作品。
 
-在线预览地址：[https://www.hanphone.top/generate-poems](https://www.hanphone.top/generate-poems/)
+在线预览地址：[https://hanphone.cn/generate-poems](https://hanphone.cn/generate-poems/)
 
 ## ✨ 项目特性
 
@@ -202,31 +202,9 @@ npm run start
 5. **下载诗歌**：点击"下载"按钮将诗歌保存为文本文件
 6. **查看历史**：在左侧"最近创作"区域查看之前生成的诗歌
 
-## 📄 许可证
+## 📊 Star History
 
-本项目采用 MIT 许可证
-
-## 📞 联系方式
-
-- GitHub: [HanphoneJan](https://github.com/HanphoneJan)
-- 项目地址: [https://github.com/HanphoneJan/generate-poems](https://github.com/HanphoneJan/generate-poems)
-
-## 🙏 致谢
-
-感谢所有为本项目做出贡献的开发者和支持者！
-
----
-
-<div align="center">
-
-[![GitHub Stars](https://img.shields.io/github/stars/HanphoneJan/generate-poems?style=for-the-badge&color=orange)](https://github.com/HanphoneJan/generate-poems/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/HanphoneJan/generate-poems?style=for-the-badge&color=blue)](https://github.com/HanphoneJan/generate-poems/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/HanphoneJan/generate-poems?style=for-the-badge&color=red)](https://github.com/HanphoneJan/generate-poems/issues)
-[![GitHub License](https://img.shields.io/github/license/HanphoneJan/generate-poems?style=for-the-badge&color=green)](https://github.com/HanphoneJan/generate-poems/blob/main/LICENSE)
-
-</div>
-
-<div align="center">
+[![Star History Chart](https://api.star-history.com/svg?repos=HanphoneJan/generate-poems&type=Date)](https://star-history.com/#HanphoneJan/generate-poems&Date)
 
 **如果这个项目对你有帮助，请给它一个 ⭐ 吧！**
 
