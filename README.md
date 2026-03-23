@@ -202,10 +202,12 @@ npm run start
 5. **下载诗歌**：点击"下载"按钮将诗歌保存为文本文件
 6. **查看历史**：在左侧"最近创作"区域查看之前生成的诗歌
 
-## 📊 Star History
+## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=HanphoneJan/generate-poems&type=Date)](https://star-history.com/#HanphoneJan/generate-poems&Date)
-
-**如果这个项目对你有帮助，请给它一个 ⭐ 吧！**
-
-</div>
+<a href="https://www.star-history.com/?repos=HanphoneJan%2Fgenerate-poems&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=HanphoneJan/generate-poems&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=HanphoneJan/generate-poems&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=HanphoneJan/generate-poems&type=date&legend=top-left" />
+ </picture>
+</a>
